@@ -123,11 +123,11 @@ function importList() {
             text.split('\n').forEach(line => {
                 line = line.trim();
                 
-                // Detecta seção de letra
+                
                 if (line.startsWith('=== ') && line.endsWith(' ===')) {
                     currentLetter = line.replace(/===/g, '').trim();
                 }
-                // Parseia linhas de itens
+                
                 else if (line.match(/^\[[ xv]\]/)) {
                     const checked = line[1] !== ' ';
                     const starred = line.includes('★');
